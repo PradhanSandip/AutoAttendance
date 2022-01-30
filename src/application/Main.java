@@ -15,19 +15,21 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
-	public static Stage main;
-	public static Scene home;
+	public static Stage mainStage;
+	public static Scene h,l,s;
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		main = primaryStage;
+		mainStage = primaryStage;
 		FileManager fm = new FileManager();
-		Parent main = FXMLLoader.load(getClass().getResource("signup.fxml")); //load the main ui
+		Parent main = FXMLLoader.load(getClass().getResource("Window.fxml")); //load the main ui
 		Parent login = FXMLLoader.load(getClass().getResource("login.fxml"));//load login ui
 		Parent signup = FXMLLoader.load(getClass().getResource("signup.fxml"));//login signup ui
 		Scene mainScene = new Scene(main, 600,650); //set the ui and size
 		Scene loginScene = new Scene(login, 600,650);
 		Scene signupScene = new Scene(signup, 600,650);
-		home = mainScene;
+		h = mainScene;
+		l = loginScene;
+		s = signupScene;
 		String css = this.getClass().getResource("Main.css").toExternalForm();
 		mainScene.getStylesheets().add(css);
 		loginScene.getStylesheets().add(css);
@@ -37,19 +39,23 @@ public class Main extends Application {
 		}else {
 			primaryStage.setScene(signupScene);
 		}
-		
+
 //		primaryStage.setScene(new FXMLLoader.load(getClass().getResource("login.fxml")));
 		primaryStage.setResizable(false);
 		primaryStage.setTitle("AutoAttendance");
 		primaryStage.show();
 	}
-	public Stage getStage() {
-		return main;
+	public void setMainScene() {
+		mainStage.setScene(h);
+	}
+	public void setLoginScene() {
+		mainStage.setScene(l);
+	}
+	public void setSignupScene() {
+		mainStage.setScene(s);
 	}
 	
-	public Scene getMainScene() {
-		return home;
-	}
+	
 	
 	public static void main(String[] args) {
 		launch(args);

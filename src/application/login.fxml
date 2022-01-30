@@ -6,21 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
-      <Label layoutX="227.0" layoutY="99.0" text="Password required">
+      <Label layoutX="202.0" layoutY="99.0" text="Password required">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <PasswordField layoutX="166.0" layoutY="277.0" prefHeight="35.0" prefWidth="319.0" promptText="Programme password" />
-      <JFXButton layoutX="253.0" layoutY="376.0" prefHeight="44.0" prefWidth="111.0" text="login">
+      <PasswordField fx:id="passwordField" layoutX="166.0" layoutY="277.0" prefHeight="35.0" prefWidth="319.0" promptText="Programme password" />
+      <JFXButton fx:id="loginButton" layoutX="253.0" layoutY="376.0" onAction="#login" prefHeight="44.0" prefWidth="111.0" text="login">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="264.0" layoutY="482.0" prefHeight="44.0" prefWidth="111.0" text="Reset login">
+      <JFXButton fx:id="resetButton" layoutX="253.0" layoutY="482.0" prefHeight="44.0" prefWidth="111.0" text="Reset login">
          <font>
             <Font size="17.0" />
          </font>

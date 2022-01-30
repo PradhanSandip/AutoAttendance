@@ -46,7 +46,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="452.0" layoutY="515.0" onAction="#removeAttendance" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: green;" text="Delete" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="452.0" layoutY="523.0" onAction="#removeAttendance" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: green;" text="Delete" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

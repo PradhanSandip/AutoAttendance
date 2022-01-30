@@ -75,9 +75,9 @@ public class SignupController implements Initializable{
 		            //hash program password
 		            String hashProgrammePassword = aes.hashPassword(pPass);
 		            FileManager fm = new FileManager();
-		            fm.writeBytes(id+" "+pass+" "+hashProgrammePassword);
+		            fm.writeBytes(eId+" "+pass+" "+hashProgrammePassword);
 		            Main m = new Main();
-		            m.getStage().setScene(m.getMainScene());
+		            m.setMainScene();
 		            
 		        } catch (Exception e) {
 		        	System.out.println(e.toString());
