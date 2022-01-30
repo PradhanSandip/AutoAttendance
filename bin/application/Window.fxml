@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Line endX="413.0" layoutX="132.0" layoutY="200.0" startX="-87.0" stroke="#0a8a2e" />
+      <Label layoutX="45.0" layoutY="228.0" text="Add custom attendance">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="460.0" layoutY="102.0" onAction="#register" prefHeight="30.0" prefWidth="83.0" ripplerFill="WHITE" style="-fx-background-color: green;" text="Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="attendanceCode" layoutX="45.0" layoutY="104.0" promptText="Attendance code">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <JFXButton buttonType="RAISED" layoutX="452.0" layoutY="307.0" onAction="#addNewCourse" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="courseName" layoutX="45.0" layoutY="309.0" promptText="Course name">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="attendanceLink" layoutX="250.0" layoutY="309.0" promptText="Attendance link">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <MenuButton fx:id="coursesMenuButton" layoutX="265.0" layoutY="102.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="117.0" text="Select course" textFill="WHITE" />
+      <Line endX="413.0" layoutX="129.0" layoutY="407.0" startX="-87.0" stroke="#0a8a2e" />
+      <Label layoutX="45.0" layoutY="438.0" text="Delete attendance">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="452.0" layoutY="515.0" onAction="#removeAttendance" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: green;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <MenuButton fx:id="deleteCourseMenuButton" layoutX="217.0" layoutY="523.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="117.0" text="Select course" textFill="WHITE" />
+   </children>
+</AnchorPane>
