@@ -19,7 +19,7 @@ public class Attendance {
 				System.setProperty("webdriver.chrome.driver",".\\src\\");
 				//chorme options
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("user-data-dir=C:\\Users\\sandi\\Downloads\\User Data");
+				options.addArguments("");
 				//manage webdriver binary
 				WebDriverManager.chromedriver().setup();
 				//create new chrome driver
